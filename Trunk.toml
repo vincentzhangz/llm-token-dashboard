@@ -1,0 +1,16 @@
+[[hooks]]
+stage = "pre_build"
+command = "sh"
+command_arguments = ["-c", "echo 'Building LLM Token Dashboard...'"]
+
+[build]
+target = "index.html"
+dist = "dist"
+
+[watch]
+ignore = ["dist", "target"]
+
+[serve]
+address = "127.0.0.1"
+port = 8080
+open = false
